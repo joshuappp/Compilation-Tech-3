@@ -1,0 +1,97 @@
+{% extends 'car/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block header %}
+ 
+     <header>
+                <nav class="navbar navbar-expand-md navbar-light find_car_nav_top fixed-top">
+                  <div class="container-fluid">
+                     <a class="navbar-brand" href="/"><img src="{% static 'img/logo.png' %}" width="100px" height="100px"/></a>
+                     <button type="button" class="navbar-toggler"  data-toggle="collapse" data-target="#navbarResponsive"> 
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarResponsive">
+                       <ul class="navbar-nav ml-auto">
+                         <li class="nav-item">
+                           <a class="nav-link" href="/car/find_car">Find Car</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link"href="/car/upload_car">Upload Car</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link"href="." style="color: black !important;">Available Cars</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link" href="/car/about_us">About Us</a>
+                         </li>
+                       </ul>
+                     </div>
+
+                  </div>
+                </nav>
+      </header>
+
+{% endblock %}
+
+{% block content %}
+
+ <section id="available-cars">
+
+    <div class="content-box-available-cars">
+
+      {% if data_available %}
+
+          <div class="content-car-title">
+              <div class="clearfix wow animated zoomIn" data-wow-duration="1s" data-wow-delay=".5s">
+                <div class="province">
+                   <p class="float-left">Province: {{province|lower|capfirst}}</p>
+                </div>
+                <div class="section">
+                   <p class="float-right">Section: {{location|lower|capfirst}} </p>
+                </div>
+                
+              </div>
+          </div>
+
+          <div class="image-card">
+
+              <div class="container-fluid">
+
+                  <div class="row no-gutters wow animated zoomIn" data-wow-duration="1s" data-wow-delay=".5s">
+
+                        {% for object in object_list %}
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="card">
+                                        <div class="card-header" >
+                                          <h6>Address:&ensp;{{object.address|lower|capfirst}}</h6>
+                                          <h6>Price: R{{object.price}}</h6>
+                                          <h6>Contact:&ensp;{{object.contact}}</h6>
+                                        </div>
+                                        
+                                        <div class="card-body">
+                                            <div class="img-wrapper">
+                                                    <img class="card-img-bottom img-responsive" src="{% static 'img/car/'%}{{object.image}}"  alt="room">
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+                        
+                  </div>
+                
+                </div>
+          </div>
+      {% else %}
+          <h1 style="text-align: center;">No Car Available</h1>
+      {% endif %}
+
+    </div>
+   
+ </section>
+
+
+{% endblock %}

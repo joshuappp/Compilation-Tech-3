@@ -1,0 +1,77 @@
+{% extends 'room/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block header %}
+ 
+     <header>
+                <nav class="navbar navbar-expand-md navbar-light find_room_nav_top fixed-top">
+                  <div class="container-fluid">
+                     <a class="navbar-brand" href="/"><img src="{% static 'img/logo.png' %}" width="100px" height="100px"/></a>
+                     <button type="button" class="navbar-toggler"  data-toggle="collapse" data-target="#navbarResponsive"> 
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarResponsive">
+                       <ul class="navbar-nav ml-auto">
+                         <li class="nav-item">
+                           <a class="nav-link" href="." style="color: black !important;">Find Room</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link" href="/residence/upload_room">Upload Room</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link" href="/residence/available_rooms">Available Rooms</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link" href="/residence/about_us">About Us</a>
+                         </li>
+                       </ul>
+                     </div>
+
+                  </div>
+                </nav>
+      </header>
+
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="findroompage_content">
+
+      <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-8 horizontal-rule">
+                {% if popup_message %}
+
+                   <div class="alert alert-secondary testDiv" role="alert">
+                    No match for Province: <strong>{{province}}</strong> Location: <strong>{{location}}</strong> Section: <strong>{{section}}</strong>
+                  </div>
+
+                {% endif %}
+                
+                <h1 class="mt-2 text-center wow animated zoomIn" data-wow-duration="1s" data-wow-delay=".5s">FIND ROOM TO RENT IN SA</h1>
+                <hr class="mt-0 mb-1">
+                  <div class="wow animated zoomIn" data-wow-duration="1s" data-wow-delay="1s">
+                       <form method="post" action="."> {% csrf_token %}
+                         
+                          {{ findroom_form.province|as_crispy_field }}
+
+                          {{ findroom_form.location|as_crispy_field }}
+
+                          {{ findroom_form.section|as_crispy_field }}
+
+                          <button type="submit" class="btn submit-button">Find</button>
+                    </form>
+                  </div>
+                    
+              </div>
+            </div>
+
+      </div>
+
+  </div>
+
+{% endblock %}

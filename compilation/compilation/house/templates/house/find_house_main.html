@@ -1,0 +1,76 @@
+{% extends 'house/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block header %}
+ 
+     <header>
+                <nav class="navbar navbar-expand-md navbar-light find_house_nav_top fixed-top">
+                  <div class="container-fluid">
+                     <a class="navbar-brand" href="/"><img src="{% static 'img/logo.png' %}" width="100px" height="100px"/></a>
+                     <button type="button" class="navbar-toggler"  data-toggle="collapse" data-target="#navbarResponsive"> 
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarResponsive">
+                       <ul class="navbar-nav ml-auto">
+                         <li class="nav-item">
+                           <a class="nav-link" href="." style="color: black !important;">Find House</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link" href="/house/upload_house/">Upload House</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link" href="/house/available_houses/">Available Houses</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link" href="/house/about_us/">About Us</a>
+                         </li>
+                       </ul>
+                     </div>
+
+                  </div>
+                </nav>
+      </header>
+
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="findhousepage_content">
+
+      <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-8 horizontal-rule">
+                {% if popup_message %}
+
+                   <div class="alert alert-secondary testDiv" role="alert">
+                    No match for Province: <strong>{{province}}</strong> Location: <strong>{{location}}</strong> Section: <strong>{{section}}
+                  </div>
+
+                {% endif %}
+                
+                <h1 class="mt-2 text-center wow animated zoomIn" data-wow-duration="1s" data-wow-delay=".5s">FIND HOUSE TO RENT IN SA</h1>
+                <hr class="mt-0 mb-1">
+                  <div class="wow animated zoomIn" data-wow-duration="1s" data-wow-delay="1s">
+                    <form method="post" action="."> {% csrf_token %}
+                         
+                          {{ findhouse_form.province|as_crispy_field }}
+
+                          {{ findhouse_form.location|as_crispy_field }}
+
+                          {{ findhouse_form.section|as_crispy_field }}
+
+                          <button type="submit" class="btn submit-button">Find</button>
+                    </form>
+                  </div>
+              </div>
+            </div>
+
+      </div>
+
+  </div>
+
+{% endblock %}

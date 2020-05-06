@@ -1,0 +1,75 @@
+{% extends 'house/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block header %}
+ 
+     <header>
+                <nav class="navbar navbar-expand-md navbar-light find_house_nav_top fixed-top">
+                  <div class="container-fluid">
+                     <a class="navbar-brand" href="/"><img src="{% static 'img/logo.png' %}" width="100px" height="100px"/></a>
+                     <button type="button" class="navbar-toggler"  data-toggle="collapse" data-target="#navbarResponsive"> 
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarResponsive">
+                       <ul class="navbar-nav ml-auto">
+                         <li class="nav-item">
+                           <a class="nav-link" href="/house/find_house">Find House</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link"href="/house/upload_house">Upload House</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link"href="/house/available_houses">Available Houses</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link" href="." style="color: black !important;">About Us</a>
+                         </li>
+                       </ul>
+                     </div>
+
+                  </div>
+                </nav>
+      </header>
+
+{% endblock %}
+
+
+{% block content %}
+    <div class="about_us_content">
+        <div class="container wow animated zoomIn" data-wow-duration="1s" data-wow-delay=".5s">
+              <div class="row justify-content-center">
+                <div class="col-8 horizontal-rule">
+                  <h1 class="mt-2 about_us_header">Mortivation behind the Residence To Find</h2>
+                  <hr class="mt-0 mb-1">
+
+                      <div class="the_aboutus">
+
+                        <ul class="list-group">
+                          <li class="list-group-item">We got the tools and properties to make it.</li>
+                          <li class="list-group-item">With small pies of tech, we can definetly make it.</li>
+                          <li class="list-group-item">We play a role to make the life more simple, with small pies of tech.</li>
+                        </ul>
+
+                      </div>
+                  <h1 class="mt-2 about_us_header">Benefits of using this Website:</h1>
+                  <hr class="mt-0 mb-1">
+                      <div class="the_aboutus">
+                              <ul class="list-group">
+                                <li class="list-group-item">There is no charge to upload your room.</li>
+                                <li class="list-group-item">The is no charge to look for the room.</li>
+                                <li class="list-group-item">We made it, to be simple and straight forward to use.</li>
+                                <li class="list-group-item">We make the life ease for everyone who need a room, or who need a tenants.</li>
+                              </ul>
+                      </div>   
+                      
+                </div>
+              </div>
+
+        </div>
+
+      </div>
+
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block header %}
+
+            <header>
+                <nav class="navbar navbar-expand-md navbar-light find_home_nav_top fixed-top">
+                  <div class="container-fluid">
+                     <a class="navbar-brand" href="."><img src="{% static 'img/logo.png' %}" width="100px" height="100px"/></a>
+                     <button type="button" class="navbar-toggler"  data-toggle="collapse" data-target="#navbarResponsive"> 
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarResponsive">
+                       <ul class="navbar-nav ml-auto">
+                         <li class="nav-item">
+                           <a class="nav-link" href="/residence/find_room">Residence</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link"href="/house/find_house">Houses</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link"href="/car/find_car">Cars</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link" href="/about_us">About Us</a>
+                         </li>
+                       </ul>
+                     </div>
+
+                  </div>
+                </nav>
+            </header>
+
+{% endblock %}
+
+
+{% block content %}
+<section id="findhome">
+
+  <div id="home-cover" class="animated fadeIn">
+
+          <div id="home_heading" class="wow animated zoomIn" data-wow-duration="1s" data-wow-delay=".5s">
+
+             <h1>WELCOME TO COMPILATION <br>TECH</h1>
+               
+
+          </div>
+
+          <div class="container">
+
+            <div class="row">
+
+                 <div class="col-md-12">
+
+                      <div id="block-items" class="owl-carousel owl-theme wow animated zoomIn" data-wow-duration="1s" data-wow-delay="1s">
+
+                              <div class="block-item">
+                                      <h5 class="home-card-header">ROOM TO RENT</h5>                              
+                                      <h6 class="home-card-title">Are You Looking For Tenance</h6>
+                                      <h6 class="home-title">Are You Looking For Room</h6>
+                                      <div class="block-item-button">
+                                            <a href="/residence/find_room" class="btn btn-primary">Follow Me</a>
+                                      </div>
+                                      
+                                        
+                              </div>
+                              <div class="block-item">
+                                      <h5 class="home-card-header">HOUSE</h5>                              
+                                      <h6 class="home-card-title">Do You Want To Sell House</h6>
+                                      <h6 class="home-title">Do You Want To Buy House</h6>
+                                      <div class="block-item-button">
+                                         <a href="/house/find_house" class="btn btn-primary">Follow Me</a>
+                                      </div>
+                                        
+                              </div>
+                              <div class="block-item">
+                                      <h5 class="home-card-header">CAR</h5>                              
+                                      <h6 class="home-card-title">Do You Want To Sell Car</h6>
+                                      <h6 class="home-title">Do You Want To Buy Car</h6>
+                                      <div class="block-item-button">
+                                           <a href="/car/find_car" class="btn btn-primary">Follow Me</a>
+                                      </div>
+                                        
+                              </div>
+                              <div class="block-item">
+                                      <h5 class="home-card-header">WEBSITE</h5>                              
+                                      <h6 class="home-card-title">Do You Want Website</h6>
+                                      <h6 class="home-title">You Are Welcome</h6>
+                                      <div class="block-item-button">
+                                          <a href="/about_us" class="btn btn-primary">Follow Me</a>
+                                      </div>
+                                        
+                              </div>
+
+                      </div>
+                   
+
+                 </div>
+              
+
+            </div>
+                 
+
+          </div>
+
+   </div>
+
+</section>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

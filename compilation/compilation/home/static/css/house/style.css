@@ -1,0 +1,333 @@
+/*=============================================================
+                   DEFAULT VALUES:
+
+                   Font Family              :Roboto Condensed
+
+                   Greenish blue            :#34c6d3   (Buttons, Icon, Links, Lines &  ) 
+                   Steel Gray               :#41464b   (Headings)
+                   Blue Bayoux              :#64707b   (Paragraphs) 
+                   White                    :#fff      (Text With Black backgrouds)
+                   Black                    :#000
+
+=============================================================*/
+/*=============================================================
+                   NAVBAR   margin: 0 auto 30px auto;
+=============================================================*/
+nav {
+	background: rgba(0, 0, 0, 0.2);
+}  
+.nav-item a {
+    font-size: 20px;
+    color: #fff !important;
+}
+.nav-item a:hover,
+.nav-item a:focus {
+   color: #64707b !important;
+}
+
+/*=============================================================
+                   FORM
+=============================================================*/
+html,body {
+	height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#findhouse {
+	height: 100%;
+}
+
+#house-cover {
+    height: 100%;
+	  background-image: url('../house_img/house.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#findhouse-content {
+	width: 100%;
+  height: 100%;
+  display: table;
+}
+
+#findhouse-content-inner {   
+	display: table-cell;
+  vertical-align: middle;
+}
+
+.about_us_container {
+   background-color: #C3D6E8;
+   padding-left: 30px;
+   border-radius: 10px;
+}
+
+/*=============================================================
+                   FORM
+=============================================================*/
+
+h1 {
+    color: #fff;
+    font-weight: 700;
+}
+label {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 700;
+}
+.submit-button {
+    margin-top: 10px;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 12px 26px 12px 26px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-color: #64707b;
+    background-color: #fff;
+    color: #000;
+}
+.submit-button:hover,
+.submit-button:focus {
+    background-color: #41464b;
+    color: #fff;
+}
+.findhousepage_content {
+  margin: 50px auto 10px auto;
+}
+.upload-content {
+  margin: 100px auto 10px auto;
+}
+.about_us-content {
+  margin: 50px auto 10px auto;
+}
+.form-group input {
+  border-color: #41464b;
+}
+.form-group select {
+  border-color: #41464b;
+}
+.horizontal-rule hr {
+    background-color: black !important;
+}
+/*=============================================================
+                     MESSAGE
+=============================================================*/
+.content-heading h3{
+   text-align: center;
+   margin: 0 0 30px 0;
+   color: #41464b;
+   padding-top: 10px;
+}
+.message-body p {
+   font-size: 22px;
+   font-weight: 700px;
+   text-align: center;
+   color: #64707b;
+}
+#message-content {
+  background-color: #e9f1f7;
+  padding-bottom: 50px;
+}
+.content-title-underline {
+   width: 30px;
+   height: 3px;
+   background-color: #64707b;
+   margin: 0 auto 30px auto;
+}
+/*=============================================================
+                     Footer top
+=============================================================*/
+
+footer {
+    background-color: #41464b;
+    padding-top: 30px;
+}
+#contact-left h3,
+#contact-right h3 {
+   color: #fff;
+   font-size: 27px;
+   font-weight: 700px;
+}
+
+#contact-left p {
+  color: #fff;
+  margin-bottom: 30px;
+  margin-right: 100px;
+}
+#contact-info {
+  letter-spacing: 1px;
+}
+
+.social-list {
+  padding-left: 0px;
+}
+.social-list li {
+  list-style: none;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 6px;
+  margin-top: 10px;
+}
+.social-list i {
+  font-size: 17px;
+}
+.icon-white {
+  color: #fff;
+}
+.social-list i:hover {
+   color: #64707b;
+}
+
+#contact {
+  margin-left: 30px;
+}
+
+#contact-right label {
+    font-size: 20px;
+    color: #fff;
+}
+#contact-right form .form-control {
+    background: transparent;
+    border-radius: 5px;
+    border-color: #fff;
+    font-size: 17px;
+    font-weight: 300;
+    padding: 8px 16px;
+    margin-bottom: 0px;
+    color: #fff;
+}
+
+#contact-right form label {
+     display: none;
+}
+
+#contact-right form .textarea {
+     height: 80px;
+}
+#contact-right form button.submit-button {
+  margin-top: 0px;
+} 
+
+/*=============================================================
+                     Footer bottom
+=============================================================*/
+
+#footer-button {
+  margin-top: 5px;
+  padding-top: 20px;
+  background-color: #64707b;
+}
+#footer-copyrights p {
+    margin: 0;
+    color: #fff;
+    text-align: center;
+}
+
+/*=============================================================
+                     AVAILABLE HOUSE
+=============================================================*/
+.province {
+  margin-left: 15px !important;
+}
+.section {
+  margin-right: 15px !important;
+}
+.province, 
+.section {
+  font-size: 30px;
+  font-weight: 700px
+}
+/*=============================================================
+                     AVAILABLE HOUSES
+=============================================================*/
+.row.no-gutters [class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.img-wrapper {
+    overflow: hidden;
+}
+
+.img-wrapper img:hover {
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.img-wrapper img:hover {
+     -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    cursor: zoom-in;
+}
+.clearfix p {
+  margin-top: 60px;
+}
+
+.card {
+  width:450px; 
+  height:400px;
+  margin-bottom: 40px;
+}
+h1 {
+  font-size: 30px;
+}
+.clearablefileinput {
+  color: #fff;
+}
+/*==================NEW ONE FOR CARD===============*/
+.province p {
+  color: #fff;
+  background-color: #41464b;
+  border-radius: 5px;
+}
+.section p {
+  color: #fff;
+  background-color: #41464b;
+  border-radius: 5px;
+  border-color: #fff !important;
+}
+.image-card {
+  height:450px;
+  border:0px solid #ccc;
+  overflow-y:auto;
+}
+.card-header {
+  background-color: #41464b;
+  padding-bottom:0px;
+}
+.card-header h6 {
+  color:white;
+}
+.card-body {
+  padding:0px;
+}
+.img-wrapper a > img {
+  height:304px;
+}
+/*============================================================
+                     ABOUT US
+=============================================================*/
+h1.about_us_header {
+  background-color: #64707b;
+  color: #fff; 
+  border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

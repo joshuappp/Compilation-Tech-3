@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+    
+        <meta name="description" content="find room to rent in south africa, buy or sell house in south africa, buy or sell car in south africa">
+        <meta name="keywords" content="rent room, buy or sell house,buy or sell car">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Compilation Tech</title>
+
+        {% load crispy_forms_tags %}
+
+
+        {% load static %}
+
+        <link rel="stylesheet" href="{% static 'css/plugins/font-awesome/css/font-awesome.min.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/plugins/bootstrap/bootstrap.min.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/plugins/animate/animate.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/plugins/owl-carousel/owl.carousel.min.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/plugins/owl-carousel/owl.theme.default.min.css' %}">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/home/style.css' %}">
+
+        <link rel="stylesheet" type="text/css" href="{%  static 'css/home/responsive.css' %}">
+
+        <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+
+    </head>
+
+    <body>
+
+            {% block header %}
+
+            {% endblock %}
+
+            {% block content %}
+
+            {% endblock %}
+
+                        
+
+            <section id="message">
+
+                <div id="message-content">
+
+                    <div class="content-heading wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                            <h3>We can make our life easy</h3>
+                            <div class="content-title-underline"></div>                                
+                    </div>
+
+                    <div class="container-fluid">
+
+                        <div class="row">
+
+                            <div class="col-12-md">
+
+                                <div class="message-body wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+
+                                    <p>We are playing a role to assist community in South Africa to find the homes to rent faster and to assist the landlords to find the tenance faster for the whole 9 provinces in South Africa , so what are you waiting for, unpload your home for free, because we can make it.</p>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+
+                </div>
+                
+            </section>
+
+            <footer>
+
+                <div id="contact">
+
+                    <div class="container wow animated zoomIn" data-wow-duration="1s" data-wow-delay=".5s">
+
+                        <div class="row">
+
+                            <div class="col-6-md">
+
+                                <div id="contact-left">
+
+                                    <h3>Residence To Find</h3>
+                                    <p>We believe that working <strong>Together</strong> we can accomplish <strong>Everything</strong>.</p>
+                                    <div id="contact-info">
+                                        <p>
+                                            <strong>Phone: </strong><span> (+27) 6712 34277</span><br>
+                                            <strong>Email: </strong><span> residence@gmail.com</span><br>
+                                       </p>                                       
+                                    </div>
+                                    <ul class="social-list">
+                                        <li><a href="#" class="social-icon icon-white"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#" class="social-icon icon-white"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#" class="social-icon icon-white"><i class="fa fa-youtube-play"></i></a></li>
+                                        <li><a href="#" class="social-icon icon-white"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                    
+                                </div>
+                                
+
+                            </div>
+                            <div class="col-6-md">
+
+                                <div id="contact-right">
+
+                                    <h3>Contact Us</h3>
+                                    
+                                          <form method="post" action="."> {% csrf_token %}
+                                               
+                                                {{ contactus_form.fullname|as_crispy_field }}
+                                                {{ contactus_form.contact|as_crispy_field }}
+                                                {{ contactus_form.email|as_crispy_field }}
+                                                {{ contactus_form.description|as_crispy_field }}
+
+                                                <button type="submit" class="btn submit-button">Save</button>
+                                          </form>
+                                    
+                                </div>
+
+                            </div>
+                            
+
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <div id="footer-button">
+
+                    <div class="container">
+
+                        <div class="row">
+
+                                <div class="col-md-12">
+                                    <div id="footer-copyrights">
+                                        <p>Copyrights &copy; 2020 All Rights Reserved By home Finder theres.co.za.</p>
+                                    </div>
+                                </div>
+                                
+                        </div>
+
+                    </div>
+                </div>
+                
+            </footer>
+
+
+        
+
+
+        <script src="{% static  'js/plugins/jquery.js' %}"></script>
+        
+        <script src="{% static  'js/plugins/bootstrap/bootstrap.min.js' %}"></script>
+
+        
+        <script src="{% static  'js/plugins/wow/wow.min.js' %}"></script>
+
+        <script src="{% static  'js/plugins/owl-carousel/owl.carousel.min.js' %}"></script>
+        
+        <script src="{% static  'js/home/custom.js' %}"></script>
+    </body>
+
+</html>
